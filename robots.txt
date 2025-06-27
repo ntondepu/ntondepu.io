@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nakshatratondepu.github.io/sitemap.xml
+
+# Disallow common non-content paths
+Disallow: /assets/private/
+Disallow: /.git/
+Disallow: /node_modules/

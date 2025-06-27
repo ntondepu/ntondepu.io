@@ -1,0 +1,122 @@
+%PDF-1.4
+1 0 obj
+<< /Title (Nakshatra Tondepu - Resume)
+   /Producer (Portfolio Website Generator)
+   /Creator (GitHub Copilot)
+   /CreationDate (D:20250627000000Z)
+>>
+endobj
+
+2 0 obj
+<< /Type /Catalog
+   /Pages 3 0 R
+>>
+endobj
+
+3 0 obj
+<< /Type /Pages
+   /Count 1
+   /Kids [4 0 R]
+>>
+endobj
+
+4 0 obj
+<< /Type /Page
+   /Parent 3 0 R
+   /Resources << /Font << /F1 5 0 R >> >>
+   /MediaBox [0 0 612 792]
+   /Contents 6 0 R
+>>
+endobj
+
+5 0 obj
+<< /Type /Font
+   /Subtype /Type1
+   /BaseFont /Helvetica
+>>
+endobj
+
+6 0 obj
+<< /Length 500 >>
+stream
+BT
+/F1 16 Tf
+50 750 Td
+(NAKSHATRA TONDEPU) Tj
+0 -20 Td
+/F1 12 Tf
+(Computer Science Student | Quantum Computing Enthusiast) Tj
+0 -30 Td
+(Email: nakshatra@example.com) Tj
+0 -15 Td
+(GitHub: github.com/nakshatratondepu) Tj
+0 -15 Td
+(LinkedIn: linkedin.com/in/nakshatratondepu) Tj
+
+0 -40 Td
+/F1 14 Tf
+(EDUCATION) Tj
+0 -20 Td
+/F1 12 Tf
+(Bachelor of Science in Computer Science) Tj
+0 -15 Td
+(University Name | Expected Graduation: 2025) Tj
+0 -15 Td
+(Relevant Coursework: Quantum Computing, Machine Learning, Data Structures) Tj
+
+0 -30 Td
+/F1 14 Tf
+(EXPERIENCE) Tj
+0 -20 Td
+/F1 12 Tf
+(Quantum Research Intern | IBM Quantum Network | Summer 2024) Tj
+0 -15 Td
+(AI/ML Research Assistant | University Research Lab | 2023-Present) Tj
+0 -15 Td
+(Software Engineering Intern | EdTech Startup | Summer 2023) Tj
+
+0 -30 Td
+/F1 14 Tf
+(SKILLS) Tj
+0 -20 Td
+/F1 12 Tf
+(Programming: Python, JavaScript, Java, C++, R) Tj
+0 -15 Td
+(Quantum: Qiskit, Cirq, Quantum Algorithms) Tj
+0 -15 Td
+(AI/ML: TensorFlow, PyTorch, Scikit-learn) Tj
+0 -15 Td
+(Web: React, Node.js, HTML/CSS, MongoDB) Tj
+
+0 -30 Td
+/F1 14 Tf
+(PROJECTS) Tj
+0 -20 Td
+/F1 12 Tf
+(Quantum Neural Network Optimizer | Python, Qiskit, TensorFlow) Tj
+0 -15 Td
+(EdTech Learning Analytics Platform | React, Node.js, MongoDB) Tj
+0 -15 Td
+(Climate Data Quantum Simulator | Qiskit, Python, Pandas) Tj
+
+ET
+endstream
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000158 00000 n 
+0000000205 00000 n 
+0000000262 00000 n 
+0000000398 00000 n 
+0000000485 00000 n 
+trailer
+<< /Size 7
+   /Root 2 0 R
+   /Info 1 0 R
+>>
+startxref
+1037
+%%EOF

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakshatra Tondepu | Portfolio</title>
+    <meta name="description" content="Computer Science student specializing in Quantum Computing, AI/ML, and EdTech solutions. Explore my projects, research, and experience.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">NT</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Nakshatra Tondepu</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Computer Science Student | Quantum Computing Enthusiast | AI/ML Developer
+                </p>
+                <p class="hero-description">
+                    Passionate about leveraging technology to solve complex problems in quantum computing, 
+                    artificial intelligence, and educational technology.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/profile.jpg" alt="Nakshatra Tondepu" class="profile-image">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Computer Science student with a deep interest in quantum computing, 
+                        artificial intelligence, and educational technology. My journey in tech began with 
+                        curiosity about how quantum mechanics could revolutionize computing.
+                    </p>
+                    <p>
+                        Currently pursuing my degree while actively engaged in research and development 
+                        projects. I believe in the power of technology to create meaningful impact, 
+                        whether it's through quantum algorithms, machine learning models, or educational tools.
+                    </p>
+                    <p>
+                        When I'm not coding or researching, you'll find me volunteering in educational 
+                        initiatives, exploring new programming languages, or diving deep into quantum 
+                        mechanics papers. I'm always eager to learn and collaborate on exciting projects.
+                    </p>
+                </div>
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <div class="skill-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">R</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Quantum Computing</h4>
+                            <div class="skill-tags">
+                                <span class="tag">Qiskit</span>
+                                <span class="tag">Cirq</span>
+                                <span class="tag">Quantum Algorithms</span>
+                                <span class="tag">QAOA</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>AI/ML</h4>
+                            <div class="skill-tags">
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">NLP</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Web Development</h4>
+                            <div class="skill-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="quantum">Quantum</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="research">Research</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Research & Publications</h2>
+            <div class="research-content">
+                <div class="research-item published">
+                    <div class="research-badge">Published</div>
+                    <h3 class="research-title">Quantum Machine Learning for Educational Content Optimization</h3>
+                    <p class="research-venue">International Conference on Quantum Computing Education (ICQCE 2024)</p>
+                    <p class="research-abstract">
+                        This paper explores the application of quantum machine learning algorithms to optimize 
+                        educational content delivery, demonstrating improved learning outcomes through 
+                        quantum-enhanced recommendation systems.
+                    </p>
+                    <div class="research-links">
+                        <a href="assets/research-paper-1.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="#" class="btn btn-small btn-secondary">
+                            <i class="fas fa-external-link-alt"></i> DOI
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="research-item in-progress">
+                    <div class="research-badge">In Progress</div>
+                    <h3 class="research-title">Hybrid Quantum-Classical Neural Networks for Climate Modeling</h3>
+                    <p class="research-venue">Target: Nature Quantum Information (2025)</p>
+                    <p class="research-abstract">
+                        Investigating the potential of hybrid quantum-classical neural networks to improve 
+                        climate prediction models, focusing on quantum advantage in processing complex 
+                        atmospheric data patterns.
+                    </p>
+                    <div class="research-status">
+                        <span class="status-indicator">Status: Data Collection & Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Quantum Research Intern</h3>
+                        <h4>IBM Quantum Network</h4>
+                        <span class="timeline-date">Summer 2024</span>
+                        <p>Developed quantum algorithms for optimization problems using Qiskit. Collaborated on quantum machine learning projects and contributed to open-source quantum computing libraries.</p>
+                        <div class="timeline-skills">
+                            <span class="tag">Qiskit</span>
+                            <span class="tag">Quantum Algorithms</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>AI/ML Research Assistant</h3>
+                        <h4>University Research Lab</h4>
+                        <span class="timeline-date">2023 - Present</span>
+                        <p>Leading research on quantum-enhanced machine learning algorithms. Published one paper and have another in review. Mentoring undergraduate students in quantum computing fundamentals.</p>
+                        <div class="timeline-skills">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineering Intern</h3>
+                        <h4>EdTech Startup</h4>
+                        <span class="timeline-date">Summer 2023</span>
+                        <p>Developed interactive educational tools using React and Node.js. Implemented machine learning features for personalized learning experiences. Improved platform performance by 40%.</p>
+                        <div class="timeline-skills">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">ML Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Volunteer Tutor</h3>
+                        <h4>Local Community Center</h4>
+                        <span class="timeline-date">2022 - Present</span>
+                        <p>Teaching programming fundamentals to high school students. Created curriculum for introduction to quantum computing concepts. Organized coding workshops and hackathons.</p>
+                        <div class="timeline-skills">
+                            <span class="tag">Teaching</span>
+                            <span class="tag">Curriculum Design</span>
+                            <span class="tag">Community Outreach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="resume-section">
+                <h3>Resume</h3>
+                <p>Download my complete resume for detailed information about my experience, education, and achievements.</p>
+                <a href="resume.pdf" class="btn btn-primary" target="_blank">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm always excited to discuss new opportunities, collaborate on projects, 
+                        or chat about quantum computing and AI. Feel free to reach out!
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:nakshatra@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>nakshatra@example.com</span>
+                        </a>
+                        <a href="https://github.com/nakshatratondepu" class="contact-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/nakshatratondepu" class="contact-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com/nakshatratondepu" class="contact-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Nakshatra Tondepu. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#research">Research</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
