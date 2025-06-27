@@ -129,8 +129,8 @@ class ProjectManager {
                 title: "Qiskit Visualizer",
                 description: "Built an interactive, browser-based quantum circuit simulator using React, Three.js, Flask, and Qiskit, featuring real-time Bloch sphere animations, drag-and-drop circuit design, and probability visualization. Enabled hardware vs. simulator comparisons and multi-qubit analysis to support hands-on learning, with planned features including tutorial modes, noise modeling, and circuit optimization.",
                 tech: ["React", "Three.js", "Flask", "Qiskit", "Python"],
-                image: null,
-                github: "https://github.com/ntondepu/qiskit-visualizer",
+                image: "images/qiskitVisualizer.png",
+                github: "https://github.com/NakshatraT/qiskitVisualizer",
                 demo: null,
                 category: "quantum"
             },
@@ -139,8 +139,8 @@ class ProjectManager {
                 title: "MedLens",
                 description: "Associated with Purdue University. Designed and built MedLens, a browser-based tool that uses OCR and language models to extract, summarize, and flag medical report data in plain English, with text-to-speech and Spanish translation. Implemented a privacy-first architecture by running all features client-side, including PDF parsing, OCR, summarization, symptom checking, and downloadable doctor question generation. Enhanced accessibility and user engagement through features like voice-based summaries, a multilingual interface, a customizable symptom checker, and exportable summaries for patient-doctor communication.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
-                image: null,
-                github: "https://github.com/ntondepu/medlens",
+                image: "images/catapult.png",
+                github: "https://github.com/NakshatraT/catapult",
                 demo: null,
                 category: "ai"
             },
@@ -149,8 +149,8 @@ class ProjectManager {
                 title: "Social Media Application Project",
                 description: "Associated with Purdue University. Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously, ensuring smooth and efficient interactions. Set up a secure database for data storage and user authentication, focusing on scalability, reliability, and privacy to deliver a modern communication platform.",
                 tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
-                image: null,
-                github: "https://github.com/ntondepu/social-media-app",
+                image: "images/socialMediaApp.png",
+                github: null,
                 demo: null,
                 category: "web"
             },
@@ -159,7 +159,7 @@ class ProjectManager {
                 title: "Tree Lafayette Dashboard",
                 description: "Engineered a full-featured Streamlit dashboard for Tree Lafayette using Python and Plotly, enabling real-time analysis of urban tree survival, planting trends, and site-level statistics. Implemented modular data pipelines and interactive UI components to support CSV/XLSX uploads, dynamic visualizations, and correlation tools for scalable environmental data tracking.",
                 tech: ["Streamlit", "Plotly", "Python", "Data Visualization", "CSV/XLSX"],
-                image: null,
+                image: "images/treeDashboard.png",
                 github: "https://github.com/ntondepu/tree-lafayette-dashboard",
                 demo: null,
                 category: "web"
@@ -224,22 +224,10 @@ class ProjectManager {
                </a>`
             : '';
 
-        const projectImage = project.image 
-            ? `<img src="${project.image}" alt="${project.title}" class="project-image" 
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="project-placeholder" style="display: none;">
-                    <i class="fas fa-code"></i>
-                    <span>Project Screenshot</span>
-                </div>`
-            : `<div class="project-placeholder">
-                 <i class="fas fa-code"></i>
-                 <span>Project Screenshot</span>
-               </div>`;
-
         return `
             <div class="project-card" data-category="${project.category}">
                 <div class="project-image-container">
-                    ${projectImage}
+                    <img src="${project.image}" alt="${project.title} Screenshot" class="project-image">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
