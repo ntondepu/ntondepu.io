@@ -130,7 +130,7 @@ class ProjectManager {
                 description: "Built an interactive, browser-based quantum circuit simulator using React, Three.js, Flask, and Qiskit, featuring real-time Bloch sphere animations, drag-and-drop circuit design, and probability visualization. Enabled hardware vs. simulator comparisons and multi-qubit analysis to support hands-on learning.",
                 tech: ["React", "Three.js", "Flask", "Qiskit", "Python"],
                 image: "assets/qiskit-visualizer.png",
-                github: "https://github.com/nakshatratondepu/qiskit-visualizer",
+                github: "https://github.com/ntondepu/qiskit-visualizer",
                 demo: null,
                 category: "quantum"
             },
@@ -140,7 +140,7 @@ class ProjectManager {
                 description: "Designed and built MedLens, a browser-based tool that uses OCR and language models to extract, summarize, and flag medical report data in plain English, with text-to-speech and Spanish translation. Implemented a privacy-first architecture by running all features client-side.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
                 image: "assets/medlens.png",
-                github: "https://github.com/nakshatratondepu/medlens",
+                github: "https://github.com/ntondepu/medlens",
                 demo: null,
                 category: "ai"
             },
@@ -150,7 +150,7 @@ class ProjectManager {
                 description: "Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously.",
                 tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
                 image: "assets/social-media-app.png",
-                github: "https://github.com/nakshatratondepu/social-media-app",
+                github: "https://github.com/ntondepu/social-media-app",
                 demo: null,
                 category: "web"
             },
@@ -160,7 +160,7 @@ class ProjectManager {
                 description: "Engineered a full-featured Streamlit dashboard for Tree Lafayette using Python and Plotly, enabling real-time analysis of urban tree survival, planting trends, and site-level statistics. Implemented modular data pipelines and interactive UI components.",
                 tech: ["Streamlit", "Plotly", "Python", "Data Visualization", "CSV/XLSX"],
                 image: "assets/tree-dashboard.png",
-                github: "https://github.com/nakshatratondepu/tree-lafayette-dashboard",
+                github: "https://github.com/ntondepu/tree-lafayette-dashboard",
                 demo: null,
                 category: "web"
             },
@@ -214,6 +214,12 @@ class ProjectManager {
     }
 
     createProjectCard(project) {
+        const githubButton = project.github 
+            ? `<a href="${project.github}" class="btn btn-small btn-secondary" target="_blank">
+                 <i class="fab fa-github"></i> GitHub
+               </a>`
+            : '';
+
         const demoButton = project.demo 
             ? `<a href="${project.demo}" class="btn btn-small" target="_blank">
                  <i class="fas fa-external-link-alt"></i> Live Demo
@@ -231,9 +237,7 @@ class ProjectManager {
                         ${project.tech.map(tech => `<span class="tag">${tech}</span>`).join('')}
                     </div>
                     <div class="project-links">
-                        <a href="${project.github}" class="btn btn-small btn-secondary" target="_blank">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
+                        ${githubButton}
                         ${demoButton}
                     </div>
                 </div>

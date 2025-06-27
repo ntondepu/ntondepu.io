@@ -1,35 +1,33 @@
 /* CSS Variables for Theme Management */
 :root {
-  /* Light Theme Colors */
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
-  --secondary-color: #64748b;
-  --accent-color: #06b6d4;
+  /* Color Palette - Green and Tan Theme */
+  --primary-color: #2d5a27;
+  --primary-dark: #1e3a1a;
+  --primary-light: #4a7c59;
+  --secondary-color: #d4b483;
+  --secondary-dark: #b8945a;
+  --secondary-light: #e6c9a3;
   
-  --bg-color: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
+  /* Background Colors */
+  --bg-color: #faf8f5;
+  --bg-secondary: #f5f2ed;
+  --bg-tertiary: #ede8e0;
+  --bg-card: #ffffff;
   
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
+  /* Text Colors */
+  --text-primary: #2d2d2d;
+  --text-secondary: #5a5a5a;
+  --text-muted: #8a8a8a;
+  --text-light: #ffffff;
   
-  --border-color: #e2e8f0;
-  --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  /* Border Colors */
+  --border-color: #e0d8cc;
+  --border-light: #f0ebe0;
   
-  /* Typography */
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
+  /* Shadow Colors */
+  --shadow-light: rgba(45, 90, 39, 0.1);
+  --shadow-medium: rgba(45, 90, 39, 0.15);
+  --shadow-heavy: rgba(45, 90, 39, 0.25);
   
   /* Spacing */
   --space-1: 0.25rem;
@@ -44,23 +42,54 @@
   --space-16: 4rem;
   --space-20: 5rem;
   
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
   /* Transitions */
-  --transition-fast: 0.15s ease-in-out;
-  --transition-normal: 0.3s ease-in-out;
-  --transition-slow: 0.5s ease-in-out;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --bg-color: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
+  /* Dark Theme - Green and Tan Variant */
+  --primary-color: #4a7c59;
+  --primary-dark: #2d5a27;
+  --primary-light: #6b9a7a;
+  --secondary-color: #b8945a;
+  --secondary-dark: #8a6d3a;
+  --secondary-light: #d4b483;
   
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
+  --bg-color: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #404040;
+  --bg-card: #2d2d2d;
   
-  --border-color: #334155;
+  --text-primary: #f5f5f5;
+  --text-secondary: #d4d4d4;
+  --text-muted: #a3a3a3;
+  
+  --border-color: #404040;
+  --border-light: #525252;
+  
+  --shadow-light: rgba(74, 124, 89, 0.2);
+  --shadow-medium: rgba(74, 124, 89, 0.3);
+  --shadow-heavy: rgba(74, 124, 89, 0.4);
 }
 
 /* Reset and Base Styles */
@@ -106,18 +135,28 @@ body {
 }
 
 .highlight {
-  background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-color);
+  z-index: -1;
 }
 
 /* Navigation */
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  left: 0;
+  right: 0;
+  background: rgba(250, 248, 245, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
@@ -125,7 +164,7 @@ body {
 }
 
 [data-theme="dark"] .navbar {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(26, 26, 26, 0.95);
 }
 
 .nav-container {
@@ -352,18 +391,18 @@ body {
   gap: var(--space-2);
   padding: var(--space-3) var(--space-6);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   font-size: var(--font-size-base);
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-fast);
-  text-align: center;
+  box-shadow: var(--shadow-light);
 }
 
 .btn-primary {
   background: var(--primary-color);
-  color: white;
+  color: var(--text-light);
 }
 
 .btn-primary:hover {
@@ -373,14 +412,12 @@ body {
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background: var(--secondary-color);
+  color: var(--text-primary);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-color);
-  color: white;
+  background: var(--secondary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
 }
@@ -433,13 +470,24 @@ body {
   gap: var(--space-2);
 }
 
-.tag {
-  background: var(--bg-tertiary);
-  color: var(--text-secondary);
-  padding: var(--space-2) var(--space-3);
-  border-radius: 20px;
-  font-size: var(--font-size-sm);
+.skill-tag {
+  background: var(--secondary-light);
+  color: var(--primary-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
   font-weight: 500;
+}
+
+.tag {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  background: var(--secondary-light);
+  color: var(--primary-dark);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  margin: var(--space-1);
 }
 
 @media (max-width: 768px) {
@@ -463,11 +511,11 @@ body {
 }
 
 .filter-btn {
-  background: transparent;
-  border: 2px solid var(--border-color);
+  background: var(--bg-tertiary);
   color: var(--text-secondary);
+  border: none;
   padding: var(--space-2) var(--space-4);
-  border-radius: 25px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: all var(--transition-fast);
   font-weight: 500;
@@ -475,9 +523,8 @@ body {
 
 .filter-btn:hover,
 .filter-btn.active {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-  background: rgba(37, 99, 235, 0.1);
+  background: var(--primary-color);
+  color: var(--text-light);
 }
 
 .projects-grid {
