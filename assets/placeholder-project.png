@@ -1,0 +1,20 @@
+# Project Images Placeholder
+
+This file serves as a placeholder for project screenshots. 
+
+## Missing Images:
+- qiskit-visualizer.png
+- medlens.png  
+- social-media-app.png
+- tree-dashboard.png
+- eduverse-sandbox.png
+- quantum-research.png
+- placeholder-project.png
+
+## To add your images:
+1. Take screenshots of your projects
+2. Resize them to 600x400px
+3. Save them in the assets folder with the names above
+4. The website will automatically use them
+
+For now, the website will show a fallback when images are missing.

@@ -191,26 +191,44 @@ class ProjectManager {
     }
 
     init() {
-        this.renderProjects();
-        this.bindFilterEvents();
+        // Small delay to ensure DOM is fully rendered
+        setTimeout(() => {
+            this.renderProjects();
+            this.bindFilterEvents();
+        }, 100);
     }
 
     renderProjects() {
         const projectsGrid = document.querySelector('.projects-grid');
-        if (!projectsGrid) return;
+        if (!projectsGrid) {
+            console.error('Projects grid not found');
+            return;
+        }
 
         const filteredProjects = this.currentFilter === 'all' 
             ? this.projects 
             : this.projects.filter(project => project.category === this.currentFilter);
 
-        projectsGrid.innerHTML = filteredProjects.map(project => this.createProjectCard(project)).join('');
+        console.log(`Rendering ${filteredProjects.length} projects for filter: ${this.currentFilter}`);
+
+        // Clear existing cards
+        projectsGrid.innerHTML = '';
         
-        // Add animation
-        setTimeout(() => {
-            document.querySelectorAll('.project-card').forEach(card => {
-                card.classList.add('visible');
+        // Add filtered projects
+        filteredProjects.forEach(project => {
+            const cardElement = document.createElement('div');
+            cardElement.innerHTML = this.createProjectCard(project);
+            projectsGrid.appendChild(cardElement.firstElementChild);
+        });
+        
+        // Add animation with a slight delay
+        requestAnimationFrame(() => {
+            document.querySelectorAll('.project-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 100);
             });
-        }, 100);
+        });
     }
 
     createProjectCard(project) {
@@ -218,7 +236,7 @@ class ProjectManager {
             ? `<a href="${project.github}" class="btn btn-small btn-secondary" target="_blank">
                  <i class="fab fa-github"></i> GitHub
                </a>`
-            : '';
+            : '<span class="btn btn-small btn-disabled">Private Repo</span>';
 
         const demoButton = project.demo 
             ? `<a href="${project.demo}" class="btn btn-small" target="_blank">
@@ -228,8 +246,14 @@ class ProjectManager {
 
         return `
             <div class="project-card" data-category="${project.category}">
-                <img src="${project.image}" alt="${project.title}" class="project-image" 
-                     onerror="this.src='assets/placeholder-project.png'">
+                <div class="project-image-container">
+                    <img src="${project.image}" alt="${project.title}" class="project-image" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="project-placeholder" style="display: none;">
+                        <i class="fas fa-code"></i>
+                        <span>Project Screenshot</span>
+                    </div>
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
                     <p class="project-description">${project.description}</p>
@@ -511,19 +535,35 @@ class AnalyticsManager {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing portfolio...');
+    
     // Initialize all managers
-    new ThemeManager();
-    new NavigationManager();
-    new ProjectManager();
-    new AnimationManager();
-    new ContactFormManager();
-    new SmoothScrollManager();
-    new PerformanceManager();
-    
-    // Initialize analytics if needed
-    // new AnalyticsManager();
-    
-    console.log('Portfolio website initialized successfully!');
+    try {
+        new ThemeManager();
+        console.log('ThemeManager initialized');
+        
+        new NavigationManager();
+        console.log('NavigationManager initialized');
+        
+        new ProjectManager();
+        console.log('ProjectManager initialized');
+        
+        new AnimationManager();
+        console.log('AnimationManager initialized');
+        
+        new ContactFormManager();
+        console.log('ContactFormManager initialized');
+        
+        new SmoothScrollManager();
+        console.log('SmoothScrollManager initialized');
+        
+        new PerformanceManager();
+        console.log('PerformanceManager initialized');
+        
+        console.log('Portfolio website initialized successfully!');
+    } catch (error) {
+        console.error('Error initializing portfolio:', error);
+    }
 });
 
 // Handle page load performance
