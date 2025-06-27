@@ -127,7 +127,7 @@ class ProjectManager {
             {
                 id: 1,
                 title: "Qiskit Visualizer",
-                description: "Built an interactive, browser-based quantum circuit simulator using React, Three.js, Flask, and Qiskit, featuring real-time Bloch sphere animations, drag-and-drop circuit design, and probability visualization. Enabled hardware vs. simulator comparisons and multi-qubit analysis to support hands-on learning.",
+                description: "Built an interactive, browser-based quantum circuit simulator using React, Three.js, Flask, and Qiskit, featuring real-time Bloch sphere animations, drag-and-drop circuit design, and probability visualization. Enabled hardware vs. simulator comparisons and multi-qubit analysis to support hands-on learning, with planned features including tutorial modes, noise modeling, and circuit optimization.",
                 tech: ["React", "Three.js", "Flask", "Qiskit", "Python"],
                 image: "assets/qiskit-visualizer.png",
                 github: "https://github.com/ntondepu/qiskit-visualizer",
@@ -137,7 +137,7 @@ class ProjectManager {
             {
                 id: 2,
                 title: "MedLens",
-                description: "Designed and built MedLens, a browser-based tool that uses OCR and language models to extract, summarize, and flag medical report data in plain English, with text-to-speech and Spanish translation. Implemented a privacy-first architecture by running all features client-side.",
+                description: "Associated with Purdue University. Designed and built MedLens, a browser-based tool that uses OCR and language models to extract, summarize, and flag medical report data in plain English, with text-to-speech and Spanish translation. Implemented a privacy-first architecture by running all features client-side, including PDF parsing, OCR, summarization, symptom checking, and downloadable doctor question generation. Enhanced accessibility and user engagement through features like voice-based summaries, a multilingual interface, a customizable symptom checker, and exportable summaries for patient-doctor communication.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
                 image: "assets/medlens.png",
                 github: "https://github.com/ntondepu/medlens",
@@ -146,8 +146,8 @@ class ProjectManager {
             },
             {
                 id: 3,
-                title: "Social Media Application",
-                description: "Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously.",
+                title: "Social Media Application Project",
+                description: "Associated with Purdue University. Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously, ensuring smooth and efficient interactions. Set up a secure database for data storage and user authentication, focusing on scalability, reliability, and privacy to deliver a modern communication platform.",
                 tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
                 image: "assets/social-media-app.png",
                 github: "https://github.com/ntondepu/social-media-app",
@@ -157,7 +157,7 @@ class ProjectManager {
             {
                 id: 4,
                 title: "Tree Lafayette Dashboard",
-                description: "Engineered a full-featured Streamlit dashboard for Tree Lafayette using Python and Plotly, enabling real-time analysis of urban tree survival, planting trends, and site-level statistics. Implemented modular data pipelines and interactive UI components.",
+                description: "Engineered a full-featured Streamlit dashboard for Tree Lafayette using Python and Plotly, enabling real-time analysis of urban tree survival, planting trends, and site-level statistics. Implemented modular data pipelines and interactive UI components to support CSV/XLSX uploads, dynamic visualizations, and correlation tools for scalable environmental data tracking.",
                 tech: ["Streamlit", "Plotly", "Python", "Data Visualization", "CSV/XLSX"],
                 image: "assets/tree-dashboard.png",
                 github: "https://github.com/ntondepu/tree-lafayette-dashboard",
