@@ -130,7 +130,7 @@ class ProjectManager {
                 description: "The Quantum Circuit Visualizer is an interactive educational tool that simplifies quantum computing by enabling users to design, simulate, and visualize quantum circuits in real time. It features drag-and-drop circuit design, real-time Bloch sphere animations, and hardware vs. simulator comparisons for hands-on learning.",
                 tech: ["JavaScript", "React", "Three.js", "Flask", "Qiskit"],
                 image: null,
-                github: "https://github.com/NakshatraT/qiskitVisualizer",
+                github: "https://github.com/ntondepu/qiskitVisualizer",
                 demo: null,
                 category: "quantum"
             },
@@ -140,7 +140,7 @@ class ProjectManager {
                 description: "MedAI Navigator is a secure, AI-driven health assistant that helps users understand their medical reports, symptoms, and prescriptions in plain English — no jargon, no panic. It also suggests personalized questions for your doctor and supports multilingual summaries.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
                 image: null,
-                github: "https://github.com/NakshatraT/catapult",
+                github: "https://github.com/ntondepu/catapult",
                 demo: null,
                 category: "ai"
             },
@@ -150,7 +150,7 @@ class ProjectManager {
                 description: "Build a dashboard to support Tree Lafayette's mission of maintaining a healthy urban tree canopy by analyzing tree survival and growth patterns.",
                 tech: ["Python", "Streamlit", "Plotly", "Data Visualization"],
                 image: null,
-                github: "https://github.com/NakshatraT/treeLafayette",
+                github: "https://github.com/ntondepu/treeLafayette",
                 demo: null,
                 category: "web"
             },
