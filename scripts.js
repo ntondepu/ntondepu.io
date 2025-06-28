@@ -226,9 +226,6 @@ class ProjectManager {
 
         return `
             <div class="project-card" data-category="${project.category}">
-                <div class="project-image-container">
-                    <img src="${project.image}" alt="${project.title} Screenshot" class="project-image">
-                </div>
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
                     <p class="project-description">${project.description}</p>
