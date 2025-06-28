@@ -126,41 +126,41 @@ class ProjectManager {
         this.projects = [
             {
                 id: 1,
-                title: "Qiskit Visualizer",
-                description: "Built an interactive, browser-based quantum circuit simulator using React, Three.js, Flask, and Qiskit, featuring real-time Bloch sphere animations, drag-and-drop circuit design, and probability visualization. Enabled hardware vs. simulator comparisons and multi-qubit analysis to support hands-on learning, with planned features including tutorial modes, noise modeling, and circuit optimization.",
-                tech: ["React", "Three.js", "Flask", "Qiskit", "Python"],
-                image: "images/qiskitVisualizer.png",
+                title: "Quantum Circuit Visualizer",
+                description: "The Quantum Circuit Visualizer is an interactive educational tool that simplifies quantum computing by enabling users to design, simulate, and visualize quantum circuits in real time. It features drag-and-drop circuit design, real-time Bloch sphere animations, and hardware vs. simulator comparisons for hands-on learning.",
+                tech: ["JavaScript", "React", "Three.js", "Flask", "Qiskit"],
+                image: null,
                 github: "https://github.com/NakshatraT/qiskitVisualizer",
                 demo: null,
                 category: "quantum"
             },
             {
                 id: 2,
-                title: "MedLens",
-                description: "Associated with Purdue University. Designed and built MedLens, a browser-based tool that uses OCR and language models to extract, summarize, and flag medical report data in plain English, with text-to-speech and Spanish translation. Implemented a privacy-first architecture by running all features client-side, including PDF parsing, OCR, summarization, symptom checking, and downloadable doctor question generation. Enhanced accessibility and user engagement through features like voice-based summaries, a multilingual interface, a customizable symptom checker, and exportable summaries for patient-doctor communication.",
+                title: "MedAI Navigator (catapult)",
+                description: "MedAI Navigator is a secure, AI-driven health assistant that helps users understand their medical reports, symptoms, and prescriptions in plain English — no jargon, no panic. It also suggests personalized questions for your doctor and supports multilingual summaries.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
-                image: "images/catapult.png",
+                image: null,
                 github: "https://github.com/NakshatraT/catapult",
                 demo: null,
                 category: "ai"
             },
             {
                 id: 3,
-                title: "Social Media Application Project",
-                description: "Associated with Purdue University. Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously, ensuring smooth and efficient interactions. Set up a secure database for data storage and user authentication, focusing on scalability, reliability, and privacy to deliver a modern communication platform.",
-                tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
-                image: "images/socialMediaApp.png",
-                github: null,
+                title: "Tree Lafayette Dashboard",
+                description: "Build a dashboard to support Tree Lafayette's mission of maintaining a healthy urban tree canopy by analyzing tree survival and growth patterns.",
+                tech: ["Python", "Streamlit", "Plotly", "Data Visualization"],
+                image: null,
+                github: "https://github.com/NakshatraT/treeLafayette",
                 demo: null,
                 category: "web"
             },
             {
                 id: 4,
-                title: "Tree Lafayette Dashboard",
-                description: "Engineered a full-featured Streamlit dashboard for Tree Lafayette using Python and Plotly, enabling real-time analysis of urban tree survival, planting trends, and site-level statistics. Implemented modular data pipelines and interactive UI components to support CSV/XLSX uploads, dynamic visualizations, and correlation tools for scalable environmental data tracking.",
-                tech: ["Streamlit", "Plotly", "Python", "Data Visualization", "CSV/XLSX"],
-                image: "images/treeDashboard.png",
-                github: "https://github.com/ntondepu/tree-lafayette-dashboard",
+                title: "Social Media Application Project",
+                description: "Developed a Java-based social media app with real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously.",
+                tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
+                image: null,
+                github: null,
                 demo: null,
                 category: "web"
             }
