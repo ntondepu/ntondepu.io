@@ -1,6 +1,6 @@
 # Nakshatra Tondepu - Portfolio Website
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://nakshatratondepu.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://ntondepu.github.io/ntondepu.io/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -107,33 +107,41 @@ ntondepu.io/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nakshatratondepu/ntondepu.io.git
+   git clone https://github.com/ntondepu/ntondepu.io.git
    cd ntondepu.io
    ```
 
 2. **Customize Content**
-   - Replace placeholder content in `index.html` with your information
-   - Add your profile photo and project screenshots to `/assets/`
-   - Update the projects array in `scripts.js` with your actual projects
-   - Replace `resume.pdf` with your actual resume
+   - Update your info in `index.html` and `scripts.js`
+   - Add your profile photo as `assets/profile.jpg`
+   - Add your resume as `assets/resume.pdf`
 
-3. **Update Contact Information**
-   - Modify email, social media links, and contact form action URL
-   - Set up Formspree or similar service for the contact form
-
-4. **Test Locally**
+3. **Test Locally**
    ```bash
-   # Using Python (if available)
-   python -m http.server 8000
-   # Or using Node.js
-   npx serve .
-   # Or simply open index.html in your browser
+   python3 -m http.server 8080
+   # Or use another port if 8080 is busy
    ```
 
-5. **Deploy to GitHub Pages**
-   - Push to your GitHub repository
-   - Enable GitHub Pages in repository settings
-   - Your site will be available at `https://yourusername.github.io/`
+   Visit [http://localhost:8080](http://localhost:8080) (or your chosen port)
+
+## 🌐 Publishing with GitHub Pages
+1. **Push your changes to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Update site"
+   git push
+   ```
+2. **Enable GitHub Pages:**
+   - Go to your repo on GitHub: https://github.com/ntondepu/ntondepu.io
+   - Go to Settings > Pages
+   - Set source to `main` branch, `/ (root)` folder
+   - Save and wait for deployment
+3. **Your site will be live at:**
+   - https://ntondepu.github.io/ntondepu.io/
+
+## 📝 Updating Resume & Profile Photo
+- **Resume:** Replace `assets/resume.pdf` with your new PDF and push to GitHub
+- **Profile Photo:** Replace `assets/profile.jpg` with your new image and push to GitHub
 
 ## 🎨 Customization
 
@@ -232,10 +240,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 - **Email**: nakshatra@example.com
-- **GitHub**: [@nakshatratondepu](https://github.com/nakshatratondepu)
+- **GitHub**: [@ntondepu](https://github.com/ntondepu)
 - **LinkedIn**: [nakshatratondepu](https://linkedin.com/in/nakshatratondepu)
 - **Website**: [ntondepu.io](https://nakshatratondepu.github.io/)
 
 ---
 
 **Built with ❤️ and ☕ by Nakshatra Tondepu**
+
+## 📋 Project Links
+- [Quantum Circuit Visualizer](https://github.com/ntondepu/qiskitVisualizer)
+- [MedAI Navigator (catapult)](https://github.com/ntondepu/catapult)
+- [Tree Lafayette Dashboard](https://github.com/ntondepu/treeLafayette)
