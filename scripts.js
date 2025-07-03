@@ -126,6 +126,16 @@ class ProjectManager {
         this.projects = [
             {
                 id: 1,
+                title: "AIInfraLens - ML Observability Platform",
+                description: "Built a comprehensive ML observability platform - a 'visual debugger' for machine learning inference pipelines. Features real-time monitoring, distributed tracing, performance heatmaps, and intelligent alerting. Includes FastAPI backend, React dashboard, multi-stage ML pipeline with sentiment analysis and image classification, and production-grade features like auto-scaling, Redis integration, and Grafana dashboards.",
+                tech: ["FastAPI", "React", "OpenTelemetry", "Prometheus", "Redis", "Docker", "TailwindCSS", "WebSocket", "Kubernetes"],
+                image: "assets/aiinfralens.png",
+                github: "https://github.com/ntondepu/aiinfralens",
+                demo: null,
+                category: "ai"
+            },
+            {
+                id: 2,
                 title: "Qiskit Visualizer",
                 description: "Built an interactive, browser-based quantum circuit simulator using React, Three.js, Flask, and Qiskit, featuring real-time Bloch sphere animations, drag-and-drop circuit design, and probability visualization. Enabled hardware vs. simulator comparisons and multi-qubit analysis to support hands-on learning.",
                 tech: ["React", "Three.js", "Flask", "Qiskit", "Python"],
@@ -135,7 +145,7 @@ class ProjectManager {
                 category: "quantum"
             },
             {
-                id: 2,
+                id: 3,
                 title: "MedLens",
                 description: "Designed and built MedLens, a browser-based tool that uses OCR and language models to extract, summarize, and flag medical report data in plain English, with text-to-speech and Spanish translation. Implemented a privacy-first architecture by running all features client-side.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
@@ -145,7 +155,7 @@ class ProjectManager {
                 category: "ai"
             },
             {
-                id: 3,
+                id: 4,
                 title: "Social Media Application",
                 description: "Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously.",
                 tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
@@ -155,7 +165,7 @@ class ProjectManager {
                 category: "web"
             },
             {
-                id: 4,
+                id: 5,
                 title: "Tree Lafayette Dashboard",
                 description: "Engineered a full-featured Streamlit dashboard for Tree Lafayette using Python and Plotly, enabling real-time analysis of urban tree survival, planting trends, and site-level statistics. Implemented modular data pipelines and interactive UI components.",
                 tech: ["Streamlit", "Plotly", "Python", "Data Visualization", "CSV/XLSX"],
@@ -165,7 +175,7 @@ class ProjectManager {
                 category: "web"
             },
             {
-                id: 5,
+                id: 6,
                 title: "EduVerse Secure Sandbox",
                 description: "Engineered and tested a secure sandbox environment to execute user-submitted code and validate outputs against expected results from structured JSON test cases. Enhanced code evaluation workflows by integrating automated output matching and error handling.",
                 tech: ["Python", "Security", "Testing", "JSON", "Code Execution"],
@@ -175,7 +185,7 @@ class ProjectManager {
                 category: "web"
             },
             {
-                id: 6,
+                id: 7,
                 title: "Quantum Computing Research",
                 description: "Acquired foundational knowledge in quantum mechanics and linear algebra to comprehend qubit behavior, enhancing the ability to develop and implement quantum algorithms effectively. Authored and published insightful articles on quantum computing topics.",
                 tech: ["Qiskit", "Quantum Algorithms", "IBM Quantum", "Technical Writing", "Research"],
