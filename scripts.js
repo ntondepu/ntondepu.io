@@ -137,8 +137,8 @@ class ProjectManager {
             {
                 id: 2,
                 title: "Quantum Circuit Visualizer",
-                description: "The Quantum Circuit Visualizer is an interactive educational tool that simplifies quantum computing by enabling users to design, simulate, and visualize quantum circuits in real time. It features drag-and-drop circuit design, real-time Bloch sphere animations, and hardware vs. simulator comparisons for hands-on learning.",
-                tech: ["JavaScript", "React", "Three.js", "Flask", "Qiskit"],
+                description: "The Quantum Circuit Visualizer is an interactive educational tool that simplifies quantum computing by enabling users to design, simulate, and visualize quantum circuits in real time. It features drag-and-drop circuit design, real-time Bloch sphere animations, and hardware vs. simulator comparisons for hands-on learning. UPCOMING UPDATES: Enhanced UI with more quantum gates (T, CNOT, CZ), advanced optimizations, and industry-leading features including interactive 3D Bloch spheres with WebGL rendering, IBM Quantum hardware integration capabilities, step-by-step circuit animation system, and advanced noise modeling for realistic simulation.",
+                tech: ["JavaScript", "React", "Three.js", "Flask", "Qiskit", "WebGL", "IBM Quantum"],
                 image: null,
                 github: "https://github.com/ntondepu/qiskitVisualizer",
                 demo: null,
@@ -146,6 +146,26 @@ class ProjectManager {
             },
             {
                 id: 3,
+                title: "AgentML - AutoML Distributed Platform",
+                description: "A comprehensive, enterprise-grade platform that combines Machine Learning automation, distributed systems simulation, and AI-powered chatbot interfaces into a unified system. Features automated ML pipeline with MLflow integration, Raft consensus algorithm implementation for distributed systems simulation, FAISS-powered semantic search chatbot with Slack integration, and comprehensive monitoring with OpenTelemetry, Prometheus, and Grafana. The platform provides end-to-end ML pipeline automation with advanced monitoring, telemetry, and scalable deployment capabilities including RESTful APIs, background task processing, real-time consensus visualization, and voice-controlled operations.",
+                tech: ["FastAPI", "MLflow", "FAISS", "OpenTelemetry", "Prometheus", "Grafana", "Docker", "Kubernetes", "Redis", "OpenAI API", "Transformers", "LangChain"],
+                image: null,
+                github: "https://github.com/ntondepu/AgentML",
+                demo: null,
+                category: "ai"
+            },
+            {
+                id: 4,
+                title: "LearnAware AI - Green Educational AI",
+                description: "A revolutionary AI tutoring system that combats the decline in student learning caused by generative AI while drastically reducing environmental impact. Uses Socratic dialogue methodology with fine-tuned T5-small model (60M parameters) achieving 99.99% lower CO2 emissions than GPT-4 equivalent usage. Features include Socratic questioning engine that never provides direct answers initially, behavioral detection system tracking quick-answer habits, real-time CO2 emission tracking, and recall booster for long-term retention. Pilot testing showed 87% higher understanding, 93% better retention after 72 hours, and 100% student preference over passive answer bots. Represents responsible AI that makes students smarter while preserving the planet.",
+                tech: ["T5-small", "Streamlit", "Flask", "CodeCarbon", "Transformers", "Socratic AI", "Green Computing"],
+                image: null,
+                github: "https://github.com/ntondepu/LearnAware",
+                demo: null,
+                category: "ai"
+            },
+            {
+                id: 5,
                 title: "MedAI Navigator (catapult)",
                 description: "MedAI Navigator is a secure, AI-driven health assistant that helps users understand their medical reports, symptoms, and prescriptions in plain English — no jargon, no panic. It also suggests personalized questions for your doctor and supports multilingual summaries.",
                 tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
@@ -155,7 +175,7 @@ class ProjectManager {
                 category: "ai"
             },
             {
-                id: 4,
+                id: 6,
                 title: "Tree Lafayette Dashboard",
                 description: "Build a dashboard to support Tree Lafayette's mission of maintaining a healthy urban tree canopy by analyzing tree survival and growth patterns.",
                 tech: ["Python", "Streamlit", "Plotly", "Data Visualization"],
@@ -165,7 +185,7 @@ class ProjectManager {
                 category: "web"
             },
             {
-                id: 5,
+                id: 7,
                 title: "Social Media Application",
                 description: "Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously.",
                 tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
