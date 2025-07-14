@@ -127,7 +127,7 @@ class ProjectManager {
             {
                 id: 1,
                 title: "AIInfraLens - ML Observability Platform",
-                description: "Excited to introduce AIInfraLens, an ML Observability Platform that brings clarity, control, and confidence to machine learning inference pipelines. This platform transforms black-box systems into fully transparent and monitorable services. Machine learning systems in production often lack operational visibility, making it challenging to debug performance issues, trace errors, or understand model behavior without the right tools. AIInfraLens empowers ML and DevOps teams to visualize the entire inference pipeline from data ingestion to API response, detect and debug bottlenecks in real-time, monitor model behavior, latency, and drift across multiple environments, and deploy confidently across dev, staging, and production with full config flexibility. Features include drag-and-drop dashboard displaying all pipeline stages and health, real-time latency graphs, heatmaps, and throughput metrics, dynamic environment configs without hardcoded ports, paths, or secrets, distributed tracing (OpenTelemetry) + Prometheus metrics, and enterprise-ready security with JWT, CORS, and optional TLS. Successfully tackled challenges like visualizing live data across microservices, ensuring <20ms latency under production loads, building a priority-based config loader, and maintaining observability without exposing secrets.",
+                description: "A comprehensive ML observability platform that transforms black-box inference pipelines into fully transparent and monitorable services. Empowers ML and DevOps teams to visualize entire pipelines from data ingestion to API response, detect bottlenecks in real-time, and monitor model behavior across environments. Features drag-and-drop dashboard, real-time latency graphs and heatmaps, dynamic environment configs, distributed tracing with OpenTelemetry + Prometheus metrics, and enterprise security with JWT/CORS/TLS. Successfully achieved <20ms latency under production loads while maintaining full observability without exposing secrets.",
                 tech: ["React.js", "FastAPI", "Python 3.13", "PyTorch", "OpenTelemetry", "Prometheus", "Grafana", "Redis", "PostgreSQL", "Docker", "Kubernetes", "JWT", "CORS", "TLS"],
                 image: "assets/aiinfralens.png",
                 github: "https://github.com/ntondepu/aiinfralens",
@@ -167,8 +167,8 @@ class ProjectManager {
             {
                 id: 5,
                 title: "MedAI Navigator (catapult)",
-                description: "MedAI Navigator is a secure, AI-driven health assistant that helps users understand their medical reports, symptoms, and prescriptions in plain English — no jargon, no panic. It also suggests personalized questions for your doctor and supports multilingual summaries.",
-                tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing"],
+                description: "A secure, AI-driven health assistant that revolutionizes medical document understanding by translating complex medical reports, symptoms, and prescriptions into plain English without jargon or panic. Features privacy-first architecture running entirely client-side, OCR for scanning physical documents, multilingual support with Spanish translation, text-to-speech for accessibility, and intelligent question generation for doctor visits. Empowers patients to understand their health information and ask informed questions during medical consultations.",
+                tech: ["JavaScript", "OCR", "NLP", "Text-to-Speech", "PDF Processing", "Client-side AI", "Multilingual Support"],
                 image: null,
                 github: "https://github.com/ntondepu/catapult",
                 demo: null,
@@ -177,8 +177,8 @@ class ProjectManager {
             {
                 id: 6,
                 title: "Tree Lafayette Dashboard",
-                description: "Build a dashboard to support Tree Lafayette's mission of maintaining a healthy urban tree canopy by analyzing tree survival and growth patterns.",
-                tech: ["Python", "Streamlit", "Plotly", "Data Visualization"],
+                description: "A comprehensive data visualization platform supporting Tree Lafayette's mission of maintaining a healthy urban tree canopy through data-driven insights. Features real-time analysis of tree survival rates, planting trends, and site-level statistics with interactive charts and maps. Implements modular data pipelines for CSV/XLSX uploads, correlation analysis tools, and automated reporting. Enables environmental researchers and city planners to track urban forestry progress, identify optimal planting locations, and measure the impact of conservation efforts across different neighborhoods and seasons.",
+                tech: ["Python", "Streamlit", "Plotly", "Data Visualization", "Pandas", "Geospatial Analysis", "Environmental Data"],
                 image: null,
                 github: "https://github.com/ntondepu/treeLafayette",
                 demo: null,
@@ -187,8 +187,8 @@ class ProjectManager {
             {
                 id: 7,
                 title: "Social Media Application",
-                description: "Developed a Java-based social media app with features like real-time messaging, friend management, group chats, and secure logins using hashed and salted passwords. Built a multithreaded server and a user-friendly GUI client to handle multiple users simultaneously.",
-                tech: ["Java", "Multithreading", "GUI", "Database", "Security"],
+                description: "A full-featured Java-based social media platform with enterprise-level security and real-time communication capabilities. Built with multithreaded server architecture to handle concurrent users, secure authentication using hashed and salted passwords, real-time messaging system, friend management with privacy controls, group chat functionality, and intuitive GUI client interface. Implemented advanced features including message encryption, user status tracking, file sharing capabilities, and robust error handling. Demonstrates proficiency in network programming, concurrent systems design, and secure application development.",
+                tech: ["Java", "Multithreading", "GUI", "Database", "Security", "Network Programming", "Encryption", "Real-time Systems"],
                 image: null,
                 github: null,
                 demo: null,
