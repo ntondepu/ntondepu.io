@@ -1,39 +1,3 @@
-// Theme Management
-class ThemeManager {
-    constructor() {
-        this.theme = localStorage.getItem('theme') || 'light';
-        this.init();
-    }
-
-    init() {
-        this.setTheme(this.theme);
-        this.bindEvents();
-    }
-
-    setTheme(theme) {
-        this.theme = theme;
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            const icon = themeToggle.querySelector('i');
-            icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        }
-    }
-
-    toggleTheme() {
-        this.setTheme(this.theme === 'light' ? 'dark' : 'light');
-    }
-
-    bindEvents() {
-        const themeToggle = document.getElementById('theme-toggle');
-        if (themeToggle) {
-            themeToggle.addEventListener('click', () => this.toggleTheme());
-        }
-    }
-}
-
 // Navigation Manager
 class NavigationManager {
     constructor() {
@@ -84,14 +48,8 @@ class NavigationManager {
     handleScroll() {
         if (window.scrollY > 50) {
             this.navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                this.navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-            }
         } else {
             this.navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                this.navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            }
         }
     }
 
@@ -127,7 +85,7 @@ class ProjectManager {
             {
                 id: 1,
                 title: "AIInfraLens - ML Observability Platform",
-                description: "A comprehensive ML observability platform that transforms black-box inference pipelines into fully transparent and monitorable services. Empowers ML and DevOps teams to visualize entire pipelines from data ingestion to API response, detect bottlenecks in real-time, and monitor model behavior across environments. Features drag-and-drop dashboard, real-time latency graphs and heatmaps, dynamic environment configs, distributed tracing with OpenTelemetry + Prometheus metrics, and enterprise security with JWT/CORS/TLS. Successfully achieved <20ms latency under production loads while maintaining full observability without exposing secrets.",
+                description: "A production-grade ML observability platform that transforms opaque inference pipelines into fully transparent, monitorable systems. Built to solve the critical challenge of debugging ML systems in production, where traditional monitoring falls short. The platform features a sophisticated drag-and-drop dashboard for visualizing pipeline stages, real-time performance analytics with sub-20ms latency tracking, intelligent bottleneck detection algorithms, and comprehensive distributed tracing using OpenTelemetry. Advanced features include priority-based configuration management, dynamic environment adaptation without hardcoded values, enterprise-grade security with JWT/CORS/TLS encryption, and seamless integration with Prometheus metrics and Grafana dashboards. Successfully deployed across dev, staging, and production environments with auto-scaling capabilities and zero-downtime updates. The system maintains full observability without exposing sensitive data, implements smart alerting with noise reduction, and provides actionable insights for ML pipeline optimization.",
                 tech: ["React.js", "FastAPI", "Python 3.13", "PyTorch", "OpenTelemetry", "Prometheus", "Grafana", "Redis", "PostgreSQL", "Docker", "Kubernetes", "JWT", "CORS", "TLS"],
                 image: "assets/aiinfralens.png",
                 github: "https://github.com/ntondepu/aiinfralens",
@@ -137,8 +95,8 @@ class ProjectManager {
             {
                 id: 2,
                 title: "Quantum Circuit Visualizer",
-                description: "The Quantum Circuit Visualizer is an interactive educational tool that simplifies quantum computing by enabling users to design, simulate, and visualize quantum circuits in real time. It features drag-and-drop circuit design, real-time Bloch sphere animations, and hardware vs. simulator comparisons for hands-on learning. UPCOMING UPDATES: Enhanced UI with more quantum gates (T, CNOT, CZ), advanced optimizations, and industry-leading features including interactive 3D Bloch spheres with WebGL rendering, IBM Quantum hardware integration capabilities, step-by-step circuit animation system, and advanced noise modeling for realistic simulation.",
-                tech: ["JavaScript", "React", "Three.js", "Flask", "Qiskit", "WebGL", "IBM Quantum"],
+                description: "An advanced educational platform that revolutionizes quantum computing learning through immersive 3D visualization and real-time simulation capabilities. Built with cutting-edge WebGL rendering for smooth 3D Bloch sphere animations, the platform provides an intuitive drag-and-drop interface for designing complex quantum circuits with support for essential gates including Hadamard, Pauli-X/Y/Z, CNOT, Controlled-Z, T-gates, and phase gates. Features real-time quantum state visualization with animated Bloch sphere representations, step-by-step circuit execution with detailed state evolution tracking, hardware vs. simulator comparison tools for educational insights, and advanced noise modeling for realistic quantum environment simulation. UPCOMING UPDATES include enhanced UI with additional quantum gates, IBM Quantum hardware integration for real device testing, improved animation systems with customizable playback speeds, and sophisticated noise models that accurately represent NISQ device limitations. The platform bridges the gap between theoretical quantum mechanics and practical quantum programming, making complex concepts accessible through interactive visualization.",
+                tech: ["JavaScript", "React", "Three.js", "WebGL", "Flask", "Qiskit", "IBM Quantum", "GLSL Shaders", "WebWorkers"],
                 image: null,
                 github: "https://github.com/ntondepu/qiskitVisualizer",
                 demo: null,
@@ -146,21 +104,21 @@ class ProjectManager {
             },
             {
                 id: 3,
-                title: "AgentML - AutoML Distributed Platform",
-                description: "A comprehensive, enterprise-grade platform that combines Machine Learning automation, distributed systems simulation, and AI-powered chatbot interfaces into a unified system. Features automated ML pipeline with MLflow integration, Raft consensus algorithm implementation for distributed systems simulation, FAISS-powered semantic search chatbot with Slack integration, and comprehensive monitoring with OpenTelemetry, Prometheus, and Grafana. The platform provides end-to-end ML pipeline automation with advanced monitoring, telemetry, and scalable deployment capabilities including RESTful APIs, background task processing, real-time consensus visualization, and voice-controlled operations.",
-                tech: ["FastAPI", "MLflow", "FAISS", "OpenTelemetry", "Prometheus", "Grafana", "Docker", "Kubernetes", "Redis", "OpenAI API", "Transformers", "LangChain"],
+                title: "AgentML - AutoML Distributed Platform [In Progress]",
+                description: "An enterprise-grade platform that unifies Machine Learning automation, distributed systems research, and AI-powered operational interfaces into a cohesive ecosystem. The ML Pipeline component provides comprehensive automation including intelligent data preprocessing with anomaly detection, hyperparameter optimization using Bayesian methods, automated model selection and ensemble techniques, MLflow-powered experiment tracking with advanced model versioning, and production deployment with A/B testing frameworks. The Distributed Systems simulation implements a complete Raft consensus algorithm with dynamic cluster membership, fault injection capabilities for testing network partitions and node failures, real-time consensus state visualization, and performance benchmarking tools. The AI Chatbot interface leverages FAISS vector databases for semantic search, provides natural language control of ML operations, integrates with Slack for enterprise communication, and implements RAG (Retrieval-Augmented Generation) for intelligent query processing. Comprehensive monitoring includes OpenTelemetry distributed tracing, custom Prometheus metrics, Grafana dashboards with automated alerting, and performance analytics for optimization insights.",
+                tech: ["FastAPI", "MLflow", "FAISS", "OpenTelemetry", "Prometheus", "Grafana", "Docker", "Kubernetes", "Redis", "OpenAI API", "Transformers", "LangChain", "Bayesian Optimization"],
                 image: null,
-                github: "https://github.com/ntondepu/AgentML",
+                github: null,
                 demo: null,
                 category: "ai"
             },
             {
                 id: 4,
-                title: "LearnAware AI - Green Educational AI",
-                description: "A revolutionary AI tutoring system that combats the decline in student learning caused by generative AI while drastically reducing environmental impact. Uses Socratic dialogue methodology with fine-tuned T5-small model (60M parameters) achieving 99.99% lower CO2 emissions than GPT-4 equivalent usage. Features include Socratic questioning engine that never provides direct answers initially, behavioral detection system tracking quick-answer habits, real-time CO2 emission tracking, and recall booster for long-term retention. Pilot testing showed 87% higher understanding, 93% better retention after 72 hours, and 100% student preference over passive answer bots. Represents responsible AI that makes students smarter while preserving the planet.",
-                tech: ["T5-small", "Streamlit", "Flask", "CodeCarbon", "Transformers", "Socratic AI", "Green Computing"],
+                title: "LearnAware AI - Green Educational AI [In Progress]",
+                description: "A groundbreaking AI tutoring system that addresses the educational crisis caused by generative AI dependency while pioneering sustainable computing practices. Built on research from MIT, Stanford, and UNESCO showing 28% decreased retention when students use AI shortcuts, LearnAware implements a sophisticated Socratic dialogue engine using a fine-tuned T5-small model (60M parameters) that achieves 99.99% lower CO2 emissions than GPT-4 equivalent usage. The system employs advanced behavioral detection algorithms to identify quick-answer seeking patterns, provides intelligent nudging to encourage deeper thinking, implements spaced repetition with recall boosters for long-term retention, and features real-time carbon emission tracking with CodeCarbon integration. The platform includes motivational frameworks based on educational psychology, personalized learning paths that adapt to individual thinking patterns, multilingual support for global accessibility, and comprehensive analytics tracking learning progress without compromising privacy. Pilot studies with 15 students demonstrated 87% higher conceptual understanding, 93% better retention after 72 hours, and 100% preference over traditional AI tools, proving that responsible AI can enhance rather than replace human learning.",
+                tech: ["T5-small", "Streamlit", "Flask", "CodeCarbon", "Transformers", "Socratic AI", "Green Computing", "Educational Psychology", "Spaced Repetition"],
                 image: null,
-                github: "https://github.com/ntondepu/LearnAware",
+                github: null,
                 demo: null,
                 category: "ai"
             },
@@ -231,6 +189,9 @@ class ProjectManager {
             projectsGrid.appendChild(cardElement.firstElementChild);
         });
         
+        // Bind read more events
+        this.bindReadMoreEvents();
+        
         // Add animation with a slight delay
         requestAnimationFrame(() => {
             document.querySelectorAll('.project-card').forEach((card, index) => {
@@ -254,11 +215,27 @@ class ProjectManager {
                </a>`
             : '';
 
+        // Truncate description for initial display
+        const maxLength = 200;
+        const truncatedDescription = project.description.length > maxLength 
+            ? project.description.substring(0, maxLength) + '...'
+            : project.description;
+        
+        const needsReadMore = project.description.length > maxLength;
+        const readMoreButton = needsReadMore 
+            ? `<button class="read-more-btn" data-project-id="${project.id}">Read More</button>`
+            : '';
+
         return `
-            <div class="project-card" data-category="${project.category}">
+            <div class="project-card" data-category="${project.category}" data-project-id="${project.id}">
                 <div class="project-content">
                     <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description">${project.description}</p>
+                    <div class="project-description-container">
+                        <p class="project-description">
+                            <span class="description-text">${truncatedDescription}</span>
+                        </p>
+                        ${readMoreButton}
+                    </div>
                     <div class="project-tech">
                         ${project.tech.map(tech => `<span class="tag">${tech}</span>`).join('')}
                     </div>
@@ -269,6 +246,31 @@ class ProjectManager {
                 </div>
             </div>
         `;
+    }
+
+    bindReadMoreEvents() {
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const projectId = parseInt(e.target.getAttribute('data-project-id'));
+                const project = this.projects.find(p => p.id === projectId);
+                const descriptionText = e.target.parentElement.querySelector('.description-text');
+                const isExpanded = e.target.textContent === 'Read Less';
+                
+                if (isExpanded) {
+                    // Collapse
+                    const maxLength = 200;
+                    const truncatedDescription = project.description.length > maxLength 
+                        ? project.description.substring(0, maxLength) + '...'
+                        : project.description;
+                    descriptionText.textContent = truncatedDescription;
+                    e.target.textContent = 'Read More';
+                } else {
+                    // Expand
+                    descriptionText.textContent = project.description;
+                    e.target.textContent = 'Read Less';
+                }
+            });
+        });
     }
 
     bindFilterEvents() {
@@ -541,9 +543,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize all managers
     try {
-        new ThemeManager();
-        console.log('ThemeManager initialized');
-        
         new NavigationManager();
         console.log('NavigationManager initialized');
         
@@ -590,7 +589,6 @@ window.addEventListener('error', (e) => {
 // Export classes for testing or external use
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
-        ThemeManager,
         NavigationManager,
         ProjectManager,
         AnimationManager,
