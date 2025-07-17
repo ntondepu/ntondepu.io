@@ -229,6 +229,138 @@ body {
   }
 }
 
+/* Enhanced Mobile Responsiveness */
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-6);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: var(--space-8);
+  }
+  
+  .project-card {
+    margin-bottom: var(--space-6);
+  }
+  
+  .btn {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+  
+  .project-tech {
+    gap: var(--space-1);
+  }
+  
+  .tag {
+    padding: var(--space-1) var(--space-2);
+    font-size: 0.7rem;
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+  
+  .container {
+    max-width: 900px;
+    padding: 0 var(--space-5);
+  }
+}
+
+/* Touch-friendly styles */
+.touch-device .btn,
+.touch-device .nav-link,
+.touch-device .filter-btn {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.touch-device .project-card {
+  cursor: default;
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Focus improvements for accessibility */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.filter-btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Improve tap targets */
+  .nav-link {
+    padding: var(--space-3) var(--space-2);
+  }
+  
+  /* Better spacing for mobile */
+  .hero {
+    padding-top: 90px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  /* Mobile-friendly form inputs */
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: var(--space-4);
+  }
+  
+  /* Mobile navigation improvements */
+  .nav-menu {
+    padding: var(--space-6) 0;
+    gap: var(--space-4);
+  }
+  
+  /* Better mobile project grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  /* Mobile typography adjustments */
+  .timeline-content h3 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .research-title {
+    font-size: var(--font-size-lg);
+    padding-right: var(--space-12);
+  }
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -1018,4 +1150,21 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }

@@ -537,6 +537,70 @@ class AnalyticsManager {
     }
 }
 
+// Mobile Experience Manager
+class MobileExperienceManager {
+    constructor() {
+        this.isTouchDevice = this.detectTouchDevice();
+        this.init();
+    }
+
+    init() {
+        if (this.isTouchDevice) {
+            document.body.classList.add('touch-device');
+        }
+        
+        this.optimizeForMobile();
+        this.handleOrientationChange();
+        this.improveTouchInteractions();
+    }
+
+    detectTouchDevice() {
+        return 'ontouchstart' in window || 
+               navigator.maxTouchPoints > 0 || 
+               navigator.msMaxTouchPoints > 0;
+    }
+
+    optimizeForMobile() {
+        // Prevent zoom on double tap for better UX
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (event) => {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Optimize scrolling performance
+        document.addEventListener('touchstart', () => {}, {passive: true});
+        document.addEventListener('touchmove', () => {}, {passive: true});
+    }
+
+    handleOrientationChange() {
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                // Trigger reflow to fix iOS viewport issues
+                window.scrollTo(0, window.scrollY);
+            }, 100);
+        });
+    }
+
+    improveTouchInteractions() {
+        // Add touch feedback for buttons
+        document.querySelectorAll('.btn, .nav-link, .filter-btn').forEach(element => {
+            element.addEventListener('touchstart', () => {
+                element.style.opacity = '0.7';
+            }, {passive: true});
+            
+            element.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    element.style.opacity = '';
+                }, 150);
+            }, {passive: true});
+        });
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded, initializing portfolio...');
@@ -560,6 +624,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         new PerformanceManager();
         console.log('PerformanceManager initialized');
+        
+        new MobileExperienceManager();
+        console.log('MobileExperienceManager initialized');
         
         console.log('Portfolio website initialized successfully!');
     } catch (error) {
@@ -595,6 +662,7 @@ if (typeof module !== 'undefined' && module.exports) {
         ContactFormManager,
         SmoothScrollManager,
         PerformanceManager,
-        AnalyticsManager
+        AnalyticsManager,
+        MobileExperienceManager
     };
 }
