@@ -103,16 +103,6 @@ class ProjectManager {
                 category: "quantum"
             },
             {
-                id: 3,
-                title: "AgentML - AutoML Distributed Platform [In Progress]",
-                description: "An enterprise-grade platform that unifies Machine Learning automation, distributed systems research, and AI-powered operational interfaces into a cohesive ecosystem. The ML Pipeline component provides comprehensive automation including intelligent data preprocessing with anomaly detection, hyperparameter optimization using Bayesian methods, automated model selection and ensemble techniques, MLflow-powered experiment tracking with advanced model versioning, and production deployment with A/B testing frameworks. The Distributed Systems simulation implements a complete Raft consensus algorithm with dynamic cluster membership, fault injection capabilities for testing network partitions and node failures, real-time consensus state visualization, and performance benchmarking tools. The AI Chatbot interface leverages FAISS vector databases for semantic search, provides natural language control of ML operations, integrates with Slack for enterprise communication, and implements RAG (Retrieval-Augmented Generation) for intelligent query processing. Comprehensive monitoring includes OpenTelemetry distributed tracing, custom Prometheus metrics, Grafana dashboards with automated alerting, and performance analytics for optimization insights.",
-                tech: ["FastAPI", "MLflow", "FAISS", "OpenTelemetry", "Prometheus", "Grafana", "Docker", "Kubernetes", "Redis", "OpenAI API", "Transformers", "LangChain", "Bayesian Optimization"],
-                image: null,
-                github: null,
-                demo: null,
-                category: "ai"
-            },
-            {
                 id: 4,
                 title: "LearnAware AI - Green Educational AI [In Progress]",
                 description: "A groundbreaking AI tutoring system that addresses the educational crisis caused by generative AI dependency while pioneering sustainable computing practices. Built on research from MIT, Stanford, and UNESCO showing 28% decreased retention when students use AI shortcuts, LearnAware implements a sophisticated Socratic dialogue engine using a fine-tuned T5-small model (60M parameters) that achieves 99.99% lower CO2 emissions than GPT-4 equivalent usage. The system employs advanced behavioral detection algorithms to identify quick-answer seeking patterns, provides intelligent nudging to encourage deeper thinking, implements spaced repetition with recall boosters for long-term retention, and features real-time carbon emission tracking with CodeCarbon integration. The platform includes motivational frameworks based on educational psychology, personalized learning paths that adapt to individual thinking patterns, multilingual support for global accessibility, and comprehensive analytics tracking learning progress without compromising privacy. Pilot studies with 15 students demonstrated 87% higher conceptual understanding, 93% better retention after 72 hours, and 100% preference over traditional AI tools, proving that responsible AI can enhance rather than replace human learning.",
